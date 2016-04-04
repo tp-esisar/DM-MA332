@@ -1,21 +1,21 @@
-%% Fonction qui génére des arrivées, suivant une loi de Poisson.
-%Pour cela, on sait que le temps inter-arrivé Tn suit une loi exponetielle
-% de paramètre Lambda.
-%On stocke toutes les heures d'arrivées dans un tableau T (et donc on 
-% cumule les temps inter-arrivé pour savoir à quel moment il est arrivé).
-%La fonction retourne alors un vecteur contenant les temps d'arrivé entre 0
-% et le temps 't' passé en paramètre.
+%% Fonction qui gï¿½nï¿½re des arrivï¿½es, suivant une loi de Poisson.
+%Pour cela, on sait que le temps inter-arrivï¿½ Tn suit une loi exponetielle
+% de paramï¿½tre Lambda.
+%On stocke toutes les heures d'arrivï¿½es dans un tableau T (et donc on 
+% cumule les temps inter-arrivï¿½ pour savoir ï¿½ quel moment il est arrivï¿½).
+%La fonction retourne alors un vecteur contenant les temps d'arrivï¿½ entre 0
+% et le temps 't' passï¿½ en paramï¿½tre.
 
 function T=poisson(t)
-    lambda = 3; %Définition du Lamdba
+    lambda = 3; %Dï¿½finition du Lamdba
     
-    %On génère la première arrivée. Attention à bien prendre l'inverse de
+    %On gï¿½nï¿½re la premiï¿½re arrivï¿½e. Attention ï¿½ bien prendre l'inverse de
     % Lamdba car la fonction de la loi exponetielle de Matlab 'exprnd'
-    % travail avec u qui est l'inverse de notre Lambda défini dans le
+    % travail avec u qui est l'inverse de notre Lambda dï¿½fini dans le
     % cours.
     T=[exprnd(1/lambda,1,1)];
     while T(end) < t
-        %On ajoute dans le tableau les arrivées, à la suite, une nouelle arrivée
+        %On ajoute dans le tableau les arrivï¿½es, ï¿½ la suite, une nouelle arrivï¿½e
         T = [T T(end)+exprnd(1/lambda,1,1)]; 
     end;
 end
