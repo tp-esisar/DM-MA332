@@ -49,3 +49,14 @@ ylabel('Moyenne des N(t)');
         
 
 %% Question 3
+%mat = unifPoisson(5,15,500);
+arrivIntervMoy(unifPoisson(5,15,500),3,5)
+arrivIntervMoy(unifPoisson(5,15,500),3,5)
+arrivIntervMoy(unifPoisson(5,15,500),3,5)
+arrivIntervMoy(unifPoisson(5,15,500),3,5)
+
+arrivIntervMoy(unifPoisson(5,15,500),1,3)
+arrivIntervMoy(unifPoisson(5,15,500),1,3)
+arrivIntervMoy(unifPoisson(5,15,500),1,3)
+arrivIntervMoy(unifPoisson(5,15,500),1,3)
+
