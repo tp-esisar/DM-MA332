@@ -1,9 +1,7 @@
-function [N]=poisson(t)
+function T=poisson(t)
     lambda = 3;
-    N = 0;
-    T = 0;
-    while T < t
-        T = T + exprnd(lambda,1,1);
-        N = N +1;
+    T=[exprnd(lambda,1,1)];
+    while T(end) < t
+        T = [T T(end)+exprnd(lambda,1,1)];
     end;
 end
