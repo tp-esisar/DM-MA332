@@ -1,4 +1,6 @@
-
+%% Fonction qui compte le nombre de personne dans chaque état
+% On compte le nombre de personne dans chaque état et on retourne un 
+% vecteur avec les résultats : [0 1 2 3]
 
 function result=compter(mat)
 result=[0 0 0 0];    

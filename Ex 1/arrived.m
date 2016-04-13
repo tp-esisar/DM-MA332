@@ -10,7 +10,7 @@ function N=arrived(T, t)
         j = 0;
         %On compte le nombre de personne qui sont arrivée (à partir des
         % temps d'arrivé)
-        while (T(j+1)<i) 
+        while (j+1<max(size(T)) && T(j+1)<i) 
             j = j+1;
         end
         N(i+1) = j; %On inscrit le nombre d'arrivée dans le tableau

@@ -29,34 +29,22 @@ for i=1:1:max(size(temps))
 end
         
 figure(2);
-plot(temps , data);
+plot(temps , data, '*-');
 title('Nombre moyen d arrivee');
 xlabel('Duree max : T');
 ylabel('Moyenne des N(t)');     
-
-% Sur la figure 2, on peut voir qu'avec la simulation obtenu avec un grand
-% nombre d'essai, on obtient une droite parfaitement linéaire.
-% Si on relève plusieurs points :
-%       - N(100) = 300.2 soit presque 300
-%       - N(60) = 176.8 soit presque 180
-%       - N(10) = 31.24 soit presque 30
-% On remarque que le coeficiant directeur de cette droite est 3, ce qui
-% corrspond à la valeur de Lambda.
-% En effet, on a pu voir dans le cours que l'on peut estimer :
-%           Lambda = N(T) / T           soit N(T) = T * Lambda
-% Et donc la fonction N(T) doit bien être linéaire, de coeficiant Lambda,
-% la simulation correspond bien à la théorie !
         
 
 %% Question 3
-%mat = unifPoisson(5,15,500);
-arrivIntervMoy(unifPoisson(5,15,500),3,5)
-arrivIntervMoy(unifPoisson(5,15,500),3,5)
-arrivIntervMoy(unifPoisson(5,15,500),3,5)
-arrivIntervMoy(unifPoisson(5,15,500),3,5)
+nbValeur = 300;
+I1(1) = arrivIntervMoy(unifPoisson(5,15,nbValeur),0,1);
+I1(2) = arrivIntervMoy(unifPoisson(5,15,nbValeur),0,1);
+I1moyen = mean(I1)
 
-arrivIntervMoy(unifPoisson(5,15,500),1,3)
-arrivIntervMoy(unifPoisson(5,15,500),1,3)
-arrivIntervMoy(unifPoisson(5,15,500),1,3)
-arrivIntervMoy(unifPoisson(5,15,500),1,3)
+I2(1) = arrivIntervMoy(unifPoisson(5,15,nbValeur),1,3);
+I2(2) = arrivIntervMoy(unifPoisson(5,15,nbValeur),1,3);
+I2moyen = mean(I2)
 
+I3(1) = arrivIntervMoy(unifPoisson(5,15,nbValeur),3,5);
+I3(2) = arrivIntervMoy(unifPoisson(5,15,nbValeur),3,5);
+I3moyen = mean(I3)

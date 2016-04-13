@@ -8,14 +8,15 @@
 
 function T=poisson(t)
     lambda = 3; %Définition du Lamdba
-    
+    T = [];
     %On génére la premiére arrivée. Attention à bien prendre l'inverse de
     % Lamdba car la fonction de la loi exponetielle de Matlab 'exprnd'
     % travail avec u qui est l'inverse de notre Lambda défini dans le
     % cours.
-    T=[exprnd(1/lambda,1,1)];
-    while T(end) < t
-        %On ajoute dans le tableau les arrivées, à la suite, une nouelle arrivée
-        T = [T T(end)+exprnd(1/lambda,1,1)]; 
+    x = exprnd(1/lambda,1,1);
+    while x < t
+        %On ajoute dans le tableau des arrivées à la suite, une nouelle arrivée
+        T = [T x]; 
+        x = T(end)+exprnd(1/lambda,1,1);
     end;
 end

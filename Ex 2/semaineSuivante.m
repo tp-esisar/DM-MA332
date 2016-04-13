@@ -1,6 +1,6 @@
 %% Fonction qui simule quel est le produit acheté par le client
 % La fonction prend donc en compte le produit acheté la semaine dernière et
-% retourne le produit que le client a acheté cette semaine.
+% retourne le produit que le client achete cette semaine.
 % On génére des nombres aléatoires avec la fonction RAND
 
 function suiv=semaineSuivante(prec)

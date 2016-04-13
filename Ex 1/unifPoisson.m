@@ -1,7 +1,7 @@
+%% Fonction qui fait des simultation d'arrivée et selectionne uniquement celle qui ont n arrivée et 0 et t
 
 function [mat] = unifPoisson (t,n,nbrea)
-  
-  mat = [];
+  mat=[];
   k = 0;
   while k < nbrea
     i = poisson(t);
