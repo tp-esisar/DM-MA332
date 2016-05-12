@@ -1,3 +1,4 @@
+%% Fonction qui génére n durées, suivant une loi de Poisson de paramètre lamdba
 function T=duree(lambda, n)
     T = [];
     i = 0;

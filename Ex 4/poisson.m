@@ -1,3 +1,6 @@
+%% Fonction qui génére des arrivées, suivant une loi de Poisson.
+%Pour cela, on sait que le temps inter-arrivé Tn suit une loi exponetielle
+% de paramétre Lambda.
 function T=poisson(lambda, t)
     T = [];
     x = exprnd(1/lambda,1,1);
